@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+{% load staticfiles %}
+  <head>
+    <meta charset="utf-8">
+    <title>View Book Records</title>
+    <link rel="stylesheet" href="{%static 'css/BRM.css' %}">
+  </head>
+  <body>
+    <div id="header">
+      <h1>Book Record Management</h1>
+
+    <div id="nav">
+      <a href="/BRMapp/view-books">view all</a>
+      <a href="/BRMapp/new-book">Add new</a>
+      <a href="/BRMapp/search-book">Search</a>
+      <a href="/BRMapp/logout">Logout</a>
+    </div>
+    <h2>Hello, {{username}}</h2>
+        </div>
+    <div id="main">
+      <h2>View Book Records</h2>
+      <table>
+        <thead>
+          <th>book title</th>
+          <th>Price</th>
+          <th>author</th>
+          <th>publisher</th>
+        </thead>
+        {% for book in books %}
+        <tr>
+          <td>{{book.title}}</td>
+          <td>{{book.price}}</td>
+          <td>{{book.author}}</td>
+          <td>{{book.publisher}}</td>
+          <td><a class="Btn" href="/BRMapp/edit-book?bookid={{book.id}}">Edit</a></td>
+          <td><a class="Btn" href="/BRMapp/delete-book?bookid={{book.id}}">Delete</a></td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+
+  </body>
+</html>
