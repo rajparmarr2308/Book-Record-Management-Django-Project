@@ -9,6 +9,6 @@ url('new-book',views.newBook),
 url(r'^add',views.add),
 url('search',views.search),
 url('edit',views.edit),
-url('login',views.userLogin),
+url('',views.userLogin),
 url('logout',views.userLogout),
 ]

@@ -20,7 +20,7 @@ from django.urls import include
 
 
 urlpatterns = [
-    url('BRMapp/',include('BRMapp.urls')),
+    url('',include('BRMapp.urls')),
     # path('test/',examapp_view.showtest),
     # path('result/',examapp_view.showresult),
     # path('about/',testapp_view.about),
